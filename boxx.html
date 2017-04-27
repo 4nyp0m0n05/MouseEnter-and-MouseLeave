@@ -1,0 +1,58 @@
+<html>
+<head> 
+<style>
+.box{
+	background-color:black;
+	width:200px;
+	height:200px;
+	display:inline-block;
+	margin-left:100px;
+}
+.box1{
+	background-color:black;
+	width:200px;
+	height:200px;
+	display:inline-block;
+	margin-right:100px;
+	
+}
+.block{
+	display:none;
+}
+
+</style>
+</head>
+<body>
+<br>
+<div class="a">
+<div class="box">
+</div>
+<div class="block">Hello<br>Hello<br>Hello<br>Hello<br>Hello
+</div>
+<div class="box1">
+</div>
+</div>
+
+<script>
+let box=document.querySelector('.box');
+let box1=document.querySelector('.box1');
+let block=document.querySelector('.block');
+let a=document.querySelector('.a');
+function over(){
+	box.style.marginLeft=0;
+	box1.style.marginRight=0;
+	block.style.display='inline-block';
+	
+}
+function left(){
+	box.style.marginLeft=100+"px";
+	box1.style.marginRight=100+"px";
+	block.style.display='none';
+	
+}
+a.addEventListener('mouseenter',over);
+a.addEventListener('mouseleave',left);
+
+</script>
+</body>
+</html>
